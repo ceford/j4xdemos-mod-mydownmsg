@@ -11,6 +11,26 @@ defined('_JEXEC') or die;
 
 use Joomla\CMS\Language\Text;
 
+$msg = Text::_('MOD_MYDOWNMSG_MSG_' . strtoupper($params->get('msg_id')));
+$tod = $params->get('hour') . ':' . $params->get('minute');
+$tz = $params->get('tz');
+
+if ($tz > 0 )
+{
+	$tz = '(+' . $tz . ')';
+}
+else if ($tz < 0)
+{
+	$tz = '(-' . $tz . ')';
+}
+else {
+	$tz = '';
+}
+
+$tod .= ' GMT ' . $tz;
+
 ?>
 
-Hello World!
+<div class="alert alert-warning" role="alert">
+	<?php echo sprintf ($msg, $tod); ?>
+</div>

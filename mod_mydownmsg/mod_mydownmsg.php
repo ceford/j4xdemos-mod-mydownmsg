@@ -11,5 +11,6 @@ defined('_JEXEC') or die;
 
 use Joomla\CMS\Helper\ModuleHelper;
 
-require ModuleHelper::getLayoutPath('mod_mydownmsg', $params->get('layout', 'default'));
+// get the message option
 
+require ModuleHelper::getLayoutPath('mod_mydownmsg', $params->get('layout', 'default'));

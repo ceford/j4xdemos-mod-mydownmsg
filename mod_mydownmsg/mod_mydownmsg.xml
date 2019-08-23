@@ -11,14 +11,19 @@
 	<version>1.0</version>
 	<!-- The description is optional and defaults to the name -->
 	<description>MOD_MYDOWNMSG_XML_DESCRIPTION</description>
+	<namespace>J4xdemos\Module\Mydownmsg</namespace>
 
 	<files>
 		<filename module="mod_mydownmsg">mod_mydownmsg.php</filename>
+        <filename>mod_mydownmsg.xml</filename>
+        <folder>tmpl</folder>
 	</files>
-	
-	<languages folder="administrator/language">
-		<language tag="en-GB">language/en-GB/en-GB.mod_mydownmsg.ini</language>
-		<language tag="en-GB">language/en-GB/en-GB.mod_mydownmsg.sys.ini</language>
+
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.mod_mydownmsg.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_mydownmsg.sys.ini</language>
+		<language tag="de-DE">de-DE/de-DE.mod_mydownmsg.ini</language>
+		<language tag="fr-FR">fr-FR/fr-FR.mod_mydownmsg.ini</language>
 	</languages>
 
 	<config>
@@ -31,11 +36,44 @@
 					label="MOD_MYDOWNMSG_PARAMS_MSG_ID_LABEL"
 					description="MOD_MYDOWNMSG_PARAMS_MSG_ID_DESC"
 					default="v1"
+					required="true"
 				>
 					<option value="v1">MOD_MYDOWNMSG_PARAMS_MSG_ID_OPTION_V1</option>
 					<option value="v2">MOD_MYDOWNMSG_PARAMS_MSG_ID_OPTION_V2</option>
 				</field>
 
+				<field
+					name="hour"
+					type="number"
+					label="MOD_MYDOWNMSG_PARAMS_HOUR_LABEL"
+					description="MOD_MYDOWNMSG_PARAMS_HOUR_DESC"
+					default="12"
+					min="0"
+					max="23"
+					required="true"
+					></field>
+
+				<field
+					name="minute"
+					type="number"
+					label="MOD_MYDOWNMSG_PARAMS_MINUTE_LABEL"
+					description="MOD_MYDOWNMSG_PARAMS_MINUTE_DESC"
+					default="00"
+					min="00"
+					max="59"
+					required="true"
+					></field>
+
+				<field
+					name="tz"
+					type="number"
+					label="MOD_MYDOWNMSG_PARAMS_TZ_LABEL"
+					description="MOD_MYDOWNMSG_PARAMS_TZ_DESC"
+					default="0"
+					min="-11"
+					max="11"
+					required="true"
+					></field>
 
 			</fieldset>
 		</fields>
