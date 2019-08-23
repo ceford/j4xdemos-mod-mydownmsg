@@ -5,7 +5,7 @@ developer demonstration and tutorial purposes.
 It creates a module used to warn users of impending
 site closure.
 
-This is not intended to be a Production plugin.
+This is not intended to be a Production module.
 
 ### Prerequisites
 
@@ -17,7 +17,7 @@ Download the zip file and install it in Joomla 4.
 
 ### Documentation
 
-The **Wiki** contains a drafy tutorial explantion of what this module does and how it works.
+The **Wiki** contains a draf tutorial explantion of what this module does and how it works.
 The final version is (will be) on the Joomla Docs site.
 
 ## Author
