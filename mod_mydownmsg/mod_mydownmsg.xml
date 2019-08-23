@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="module" version="4.0" method="upgrade" client="site">
+	<name>mod_mydownmsg</name>
+	<creationDate>August 2019</creationDate>
+	<author>Clifford E Ford</author>
+	<authorEmail>cliff@ford.myzen.co.uk</authorEmail>
+	<authorUrl>http://www.fford.me.uk/</authorUrl>
+	<copyright>Copyright (C) 2019 Clifford E Ford, All rights reserved.</copyright>
+	<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<!--  The version string is recorded in the components table -->
+	<version>1.0</version>
+	<!-- The description is optional and defaults to the name -->
+	<description>MOD_MYDOWNMSG_XML_DESCRIPTION</description>
+
+	<files>
+		<filename module="mod_mydownmsg">mod_mydownmsg.php</filename>
+	</files>
+	
+	<languages folder="administrator/language">
+		<language tag="en-GB">language/en-GB/en-GB.mod_mydownmsg.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_mydownmsg.sys.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+
+				<field 
+					name="msg_id"
+					type="list"
+					label="MOD_MYDOWNMSG_PARAMS_MSG_ID_LABEL"
+					description="MOD_MYDOWNMSG_PARAMS_MSG_ID_DESC"
+					default="v1"
+				>
+					<option value="v1">MOD_MYDOWNMSG_PARAMS_MSG_ID_OPTION_V1</option>
+					<option value="v2">MOD_MYDOWNMSG_PARAMS_MSG_ID_OPTION_V2</option>
+				</field>
+
+
+			</fieldset>
+		</fields>
+	</config>
+</extension>
