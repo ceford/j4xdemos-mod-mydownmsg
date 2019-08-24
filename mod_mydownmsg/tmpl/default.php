@@ -11,7 +11,9 @@ defined('_JEXEC') or die;
 
 use Joomla\CMS\Language\Text;
 
+// the $msg string contains a %s placeholder to be replaced in a sprintf statement
 $msg = Text::_('MOD_MYDOWNMSG_MSG_' . strtoupper($params->get('msg_id')));
+
 $tod = $params->get('hour') . ':' . $params->get('minute');
 $tz = $params->get('tz');
 
